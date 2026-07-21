@@ -1240,16 +1240,15 @@ body{
 
 .journey-page{
     display:none;
-    position:absolute;
-    inset:0;
-    justify-content:center;
-    align-items:center;
+    min-height:100vh;
+    width:100%;
+    box-sizing:border-box;
     flex-direction:column;
+    align-items:center;
     text-align:center;
-    padding:40px 20px;
+    padding:80px 20px 40px;
     animation:fadeIn .8s ease;
 }
-
 .journey-page h1{
     font-size:42px;
     margin-bottom:10px;
@@ -1263,19 +1262,22 @@ body{
 
 .journey-container{
     display:flex;
+    flex-direction:row;
     justify-content:center;
+    align-items:flex-start;
     gap:30px;
-    flex-wrap:wrap;
-    margin-bottom:35px;
+    width:100%;
+    max-width:1200px;
+    margin:40px auto;
 }
 
 .journey-card{
+    width:100%;
     background:rgba(255,255,255,.15);
     backdrop-filter:blur(12px);
     border-radius:20px;
-    padding:20px;
-    width:260px;
-    transition:.35s;
+    padding:18px;
+    box-sizing:border-box;
     box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
@@ -1283,21 +1285,44 @@ body{
     transform:translateY(-8px) scale(1.03);
 }
 
-.journey-card img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    border-radius:16px;
+.journey-card{
+    width:300px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    border-radius:22px;
+    padding:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    transition:.35s;
+    text-align:center;
+}
+
+.journey-card:hover{
+    transform:translateY(-8px) scale(1.03);
+}.journey-card{
+    width:300px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    border-radius:22px;
+    padding:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    transition:.35s;
+    text-align:center;
+}
+
+.journey-card:hover{
+    transform:translateY(-8px) scale(1.03);
 }
 
 .journey-card h3{
-    margin:18px 0 10px;
+    margin-top:18px;
+    font-size:28px;
+    font-weight:700;
 }
 
 .journey-card p{
-    font-size:15px;
+    margin-top:10px;
+    font-size:17px;
     line-height:1.6;
-    margin:0;
 }
 
 /* Mobile */
@@ -1314,8 +1339,14 @@ body{
         max-width:320px;
     }
 
+}
+
     .journey-card img{
-        height:220px;
-    }
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:16px;
+    display:block;
+}
 
 }

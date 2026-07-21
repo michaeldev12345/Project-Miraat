@@ -19,8 +19,7 @@ const messageNextBtn = document.getElementById("messageNextBtn");
 // =======================================
 
 
-const balloons = document.querySelectorAll(".balloon");
-const status = document.getElementById("balloonStatus");
+const journeyPage = document.getElementById("journeyPage");
 const journeyNextBtn = document.getElementById("journeyNextBtn");
 
 let popped = 0;
@@ -111,70 +110,6 @@ journeyPage.style.display = "flex";
 });
 
 
-// =======================================
-// Balloon Game
-// =======================================
-
-balloons.forEach((balloon) => {
-
-    balloon.addEventListener("click", () => {
-
-        if(balloon.classList.contains("opened")) return;
-
-        balloon.classList.add("opened");
-
-        const emoji = balloon.querySelector(".emoji");
-        const photo = balloon.querySelector(".hidden-photo");
-
-        popupImage.src = photo.src;
-
-photoPopup.style.display = "flex";
-popupImage.classList.add("show");
-
-setTimeout(() => {
-
-    popupImage.classList.remove("show");
-
-    photoPopup.style.display = "none";
-
-},3000);
-        emoji.style.display = "none";
-
-
-        setTimeout(() => {
-
-            balloon.style.display = "none";
-
-        }, 3000);
-
-        popped++;
-
-        status.textContent = `📸 Photos Found: ${popped}/4`;
-
-        if(popped === 4){
-
-            status.textContent = "🎉 Great Job!";
-
-            nextBtn.style.display = "inline-block";
-
-        }
-
-    });
-
-});
-
-
-// =======================================
-// Balloon → Gift
-// =======================================
-
-nextBtn.addEventListener("click", () => {
-
-balloonPage.style.display = "none";
-giftPage.style.display = "flex";
-
-});
-
 
 // =======================================
 // Gift → Letter
@@ -186,7 +121,7 @@ giftBox.addEventListener("click", () => {
 
     giftBox.innerHTML = "📦";
 
-    giftMessage.innerHTML = "✨ Opening Your Surprise...";
+    giftMessage.innerHTML = "✨ Just a moment...";
 
     setTimeout(() => {
 
@@ -239,9 +174,9 @@ blowBtn.addEventListener("click", () => {
 
         wishDone = true;
 
-        candles.innerHTML = "💨 💨 💨";
+        candles.innerHTML = "🤲";
 
-        blowBtn.innerHTML = "🎉 Wish Made!";
+blowBtn.innerHTML = "✨ Ameen";
 
         if (typeof confetti === "function") {
 
