@@ -1232,3 +1232,90 @@ body{
     }
 
 }
+
+
+/* ===================================
+   Childhood Journey
+=================================== */
+
+.journey-page{
+    display:none;
+    position:absolute;
+    inset:0;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:40px 20px;
+    animation:fadeIn .8s ease;
+}
+
+.journey-page h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.journey-page p{
+    font-size:18px;
+    max-width:650px;
+    margin-bottom:35px;
+}
+
+.journey-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-bottom:35px;
+}
+
+.journey-card{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:20px;
+    width:260px;
+    transition:.35s;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.journey-card:hover{
+    transform:translateY(-8px) scale(1.03);
+}
+
+.journey-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:16px;
+}
+
+.journey-card h3{
+    margin:18px 0 10px;
+}
+
+.journey-card p{
+    font-size:15px;
+    line-height:1.6;
+    margin:0;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .journey-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .journey-card{
+        width:90%;
+        max-width:320px;
+    }
+
+    .journey-card img{
+        height:220px;
+    }
+
+}

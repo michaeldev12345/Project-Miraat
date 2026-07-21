@@ -18,10 +18,10 @@ const messageNextBtn = document.getElementById("messageNextBtn");
 // Balloon Page
 // =======================================
 
-const balloonPage = document.getElementById("balloonPage");
+
 const balloons = document.querySelectorAll(".balloon");
 const status = document.getElementById("balloonStatus");
-const nextBtn = document.getElementById("nextBtn");
+const journeyNextBtn = document.getElementById("journeyNextBtn");
 
 let popped = 0;
 
@@ -105,8 +105,8 @@ musicToggle.addEventListener("click", () => {
 
 messageNextBtn.addEventListener("click", () => {
 
-    messagePage.style.display = "none";
-    balloonPage.style.display = "flex";
+   messagePage.style.display = "none";
+journeyPage.style.display = "flex";
 
 });
 
@@ -338,5 +338,12 @@ document.querySelectorAll("img").forEach(img => {
         e.preventDefault();
 
     });
+
+});
+
+journeyNextBtn.addEventListener("click", () => {
+
+    journeyPage.style.display = "none";
+    giftPage.style.display = "flex";
 
 });
