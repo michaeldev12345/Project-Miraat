@@ -201,12 +201,16 @@ confetti({
 
     } else {
 
-        confetti({
-    particleCount:100,
-    spread:90,
-    origin:{y:0.6}
+    cakePage.style.display = "none";
+    finalPage.style.display = "flex";
 
-    }
+    confetti({
+        particleCount: 100,
+        spread: 90,
+        origin: { y: 0.6 }
+    });
+
+}
 
 });
 
