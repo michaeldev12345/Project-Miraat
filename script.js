@@ -85,13 +85,13 @@ musicToggle.addEventListener("click", () => {
 
         bgMusic.play();
 
-        musicToggle.innerHTML = "🔊 Music On";
+musicToggle.innerHTML = "🎵 Music";
 
     } else {
 
         bgMusic.pause();
 
-        musicToggle.innerHTML = "🔇 Music Off";
+musicToggle.innerHTML = "🔇 Muted";
 
     }
 
@@ -119,9 +119,10 @@ giftBox.addEventListener("click", () => {
 
     giftBox.style.pointerEvents = "none";
 
-    giftBox.innerHTML = "📦";
+giftBox.innerHTML = "🎀";
 
-    giftMessage.innerHTML = "✨ Just a moment...";
+    giftMessage.innerHTML = "✨ Opening something special...";
+
 
     setTimeout(() => {
 
@@ -143,7 +144,11 @@ envelope.addEventListener("click", () => {
 
     envelope.style.display = "none";
 
-    letterPaper.style.display = "block";
+letterPaper.style.display = "block";
+
+setTimeout(() => {
+    letterPaper.classList.add("show");
+},100);
 
     letterNextBtn.style.display = "inline-block";
 
@@ -181,20 +186,25 @@ blowBtn.innerHTML = "✨ Ameen";
         if (typeof confetti === "function") {
 
             confetti({
+    particleCount:120,
+    spread:70,
+    origin:{x:0}
+});
 
-                particleCount: 200,
-                spread: 120,
-                origin: { y: 0.6 }
-
-            });
+confetti({
+    particleCount:120,
+    spread:70,
+    origin:{x:1}
+});
 
         }
 
     } else {
 
-        cakePage.style.display = "none";
-
-        finalPage.style.display = "flex";
+        confetti({
+    particleCount:100,
+    spread:90,
+    origin:{y:0.6}
 
     }
 
@@ -262,7 +272,7 @@ function createHeart(){
 
 }
 
-setInterval(createHeart,700);
+setInterval(createHeart,1200);
 
 // Disable Right Click on Images
 
