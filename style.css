@@ -1243,13 +1243,17 @@ body{
     display:none;
     min-height:100vh;
     width:100%;
-    padding:80px 20px;
+    padding:120px 20px 40px;
     box-sizing:border-box;
     flex-direction:column;
-    justify-content:center;
+    justify-content:flex-start;
     align-items:center;
     text-align:center;
     animation:fadeIn .8s ease;
+
+    background:linear-gradient(135deg,#ffdde1,#ee9ca7,#d4c1ec,#b5d8ff);
+    background-size:300% 300%;
+    animation:bgMove 10s ease infinite, fadeIn .8s ease;
 }
 
 .journey-page h1{

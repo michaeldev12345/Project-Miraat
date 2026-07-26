@@ -104,11 +104,15 @@ musicToggle.innerHTML = "🔇 Muted";
 
 messageNextBtn.addEventListener("click", () => {
 
-   messagePage.style.display = "none";
-journeyPage.style.display = "flex";
+    messagePage.style.display = "none";
+    window.scrollTo({ top: 0, behavior: "instant" });
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 });
-
 
 
 // =======================================
@@ -294,5 +298,10 @@ journeyNextBtn.addEventListener("click", () => {
 
     journeyPage.style.display = "none";
     giftPage.style.display = "flex";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "instant"
+    });
 
 });
