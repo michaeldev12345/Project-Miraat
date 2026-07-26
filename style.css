@@ -14,14 +14,15 @@
 
 body{
 
-    height:100vh;
-    overflow:hidden;
+    min-height:100vh;
+
+    overflow-x:hidden;
+    overflow-y:auto;
 
     font-family:'Poppins',sans-serif;
 
     background:linear-gradient(135deg,#ffdde1,#ee9ca7,#d4c1ec,#b5d8ff);
     background-size:300% 300%;
-
     animation:bgMove 10s ease infinite;
 
 }
@@ -1240,16 +1241,29 @@ body{
 =================================== */
 
 .journey-page{
+
     display:none;
-    min-height:100vh;
+
+    position:absolute;
+    inset:0;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
     width:100%;
-    padding:80px 20px;
+
+    padding:100px 20px 40px;
+
     box-sizing:border-box;
+
     flex-direction:column;
-    justify-content:center;
+    justify-content:flex-start;
     align-items:center;
+
     text-align:center;
+
     animation:fadeIn .8s ease;
+
 }
 
 .journey-page h1{
